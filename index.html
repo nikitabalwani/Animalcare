@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animal care</title>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                box-sizing: border-box;
+            }
+            .navbar {
+                background-color:lightblue;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+            }
+            .navbar .logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                width: 170px;
+                height: 170px;
+                background-color: white;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+                transform: scale(0);
+                animation: logoPop 1.5s ease-out forwards;
+            }
+            @keyframes logoPop {
+                0% {
+                    transform: scale(0);
+                    opacity: 0;
+                }
+                100% {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+            .navbar .logo img {
+                width: 150px;
+                height: 120px;
+                border-radius: 50%;
+                transform: rotate(0deg);
+                animation: rotateLogo 2s ease-in-out;
+            }
+            @keyframes rotateLogo {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+            .details{
+                display: flex;
+                flex-direction:column;
+                gap: 30px;
+                position:fixed;
+               left: 10px;
+              top: 190px;
+            }
+             .details a {
+                text-decoration: none;
+                color: white;
+                padding: 10px 20px;
+                background-color:teal;
+                border-radius: 10px;
+                transition: 0.3s;
+            }
+             .details a:hover {
+                background: #222;
+            }
+            .grid-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+                padding: 20px;
+                background-color: azure;
+                margin-left: 100px;
+                width:80%;
+                transform: translateY(100px);
+                animation: slideUp 1s ease-out forwards;
+            }
+            @keyframes slideUp {
+                0% {
+                    opacity: 0;
+                    transform: translateY(100px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            .grid-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid #ccc;
+                background-color: aliceblue;
+                transition: transform 0.8s ease;
+            }
+            .grid-item:hover {
+                transform: perspective(90deg);
+            }
+            .grid-item img{
+                max-width:90%;
+                height: auto;
+            }
+            footer{
+                text-align: center;
+                background-color: darkgrey;
+            }
+            .social-icons{
+                align:center;
+                background-color: dimgrey;
+            }
+            @media (max-width: 1024px) {
+                .services {
+                    gap: 10px;
+                }
+                .service-box {
+                    width: 45%;
+                }
+            }
+            @media (max-width: 768px) {
+                .details {
+                    position: static;
+                    flex-direction: row;
+                    justify-content: center;
+                    gap: 15px;
+                    margin: 20px 0;
+                }
+                .service-box {
+                    width: 100%;
+                    max-width: 300px;
+                }
+            }
+            @media (max-width: 480px) {
+                .service-box {
+                    width: 100%;
+                }
+                .details {
+                    flex-direction: column;
+                    text-align: center;
+                }
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="navbar">
+        <a class="logo"> <img src="https://tse4.mm.bing.net/th?id=OIP.v9qDF7RvPYU0LpBJydAJsAHaHa&pid=Api&P=0&h=180"></a>
+    </div>
+        <div class="details">
+            <a href="index.html">Home</a>
+            <a href="about us.html">About us</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            </div>
+            <center>
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <img src="https://tse3.mm.bing.net/th?id=OIP.JFLrgScGPBx9aXdr-u4P1QHaE8&pid=Api&P=0&h=180" height="100%" width="100%">
+
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://tse3.mm.bing.net/th?id=OIP.91LeoIz3XLgsfPfosD3UgwHaE8&pid=Api&P=0&h=180"height="100%" width="100%">
+                        </div>
+                        <div class="grid-item">
+                            <img src="https://tse3.mm.bing.net/th?id=OIP.dxzNEf8DC6g8UecXCcJbewHaD1&pid=Api&P=0&h=180"height="100%" width="100%">
+                        </div>
+                        <div class="grid-item">
+                            <img src="https://tse4.mm.bing.net/th?id=OIP.N5UoQXgkB7qovKxP6NsXpAHaDp&pid=Api&P=0&h=180"height="100%" width="100%">
+                        </div>
+
+                </div>
+                </center>
+            </body>
+
+        </div>
+        <footer>
+            <p>&copy;Animal care Haven🐾,All Rights are Reserved </p>
+            <div class="social-icons">
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" height="1%" width="1%"></a>
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" height="1%" width="1%"></a>
+            </div>
+        </footer>
+    </body>
+</html>

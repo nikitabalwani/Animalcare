@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>contact
+        </title>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                box-sizing: border-box;
+            }
+            .navbar {
+                background-color:lightblue;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+            }
+            .navbar .paw-logo {
+                width: 20px;
+                height: 20px;
+            }
+            .navbar .logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                width: 150px;
+                height: 150px;
+                background-color: white;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+                transform: scale(0);
+                animation: logoPop 1.5s ease-out forwards;
+            }
+            @keyframes logoPop {
+                0% {
+                    transform: scale(0);
+                    opacity: 0;
+                }
+                100% {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+            .navbar .logo img {
+                width: 150px;
+                height: 120px;
+                border-radius: 50%;
+                transform: rotate(0deg);
+                animation: rotateLogo 2s ease-in-out;
+            }
+            @keyframes rotateLogo {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+               .details {
+                display: flex;
+                flex-direction:column;
+                gap: 30px;
+                position:fixed;
+                top: 320px;
+                left: 10px;
+                transform: translateY(-50%);
+                z-index: 1;
+            }
+             .details a {
+                text-decoration: none;
+                color: white;
+                padding: 10px 20px;
+                background-color:teal;
+                border-radius: 10px;
+                transition: 0.3s;
+            }
+             .details a:hover {
+                background: #222;
+             }
+             .address{
+                padding: 20px;
+                color: rosybrown;
+        
+            }
+            footer{
+                text-align: center;
+                background-color: darkgrey;
+                padding:3px;
+                font-size: 10px;
+            }
+            .social-icons{
+                align:center;
+                background-color: dimgrey;
+                margin: 5px;
+            }
+            @media (max-width: 1024px) {
+                .services {
+                    gap: 10px;
+                }
+                .service-box {
+                    width: 45%;
+                }
+            }
+            @media (max-width: 768px) {
+                .details {
+                    position: static;
+                    flex-direction: row;
+                    justify-content: center;
+                    gap: 15px;
+                    margin: 20px 0;
+                }
+                .service-box {
+                    width: 100%;
+                    max-width: 300px;
+                }
+            }
+            @media (max-width: 480px) {
+                .service-box {
+                    width: 100%;
+                }
+                .details {
+                    flex-direction: column;
+                    text-align: center;
+                }
+            }
+    
+        </style>    
+    </head>
+    <body>
+        <div class="navbar">
+            <a class="logo"> <img src="https://tse4.mm.bing.net/th?id=OIP.v9qDF7RvPYU0LpBJydAJsAHaHa&pid=Api&P=0&h=180"></a>
+        </div>
+            <div class="details">
+                <a href="index.html">Home</a>
+                <a href="about us.html">About us</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+                </div>
+            <div class="address"><center>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31099.03363718896!2d77.76330881083983!3d13.01150700000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae0fd249e70d97%3A0x57524c9e0bbaa0c3!2sHaven%20Animal%20Welfare%20Trust!5e0!3m2!1sen!2sin!4v1740892962112!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h3 style="color:darkred">Email id:animalcarehaven@gmail.com</h3><br>
+        <address style="font-size:20px;">
+            <h5>Animal Care Haven</h5>
+            near nadiad-vadoadara highway
+            pij road,
+            Nadiad-387001
+            Gujarat
+        </address>
+        <marquee>Contact no:6778990034</marquee>
+    </center>
+    </div>
+    <footer>
+        <p>&copy;Animal care Haven🐾,All Rights are Reserved </p>
+        <div class="social-icons">
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" height="2%" width="2%"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" height="2%" width="2%"></a>
+        </div>
+    </footer>
+
+    </body>
+</html>
